@@ -3,6 +3,9 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
 
+
+console.log('Conectando no mongodb');
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
@@ -11,7 +14,7 @@ db.on('error', function (err) {
 	console.log('connection error', err);
 });
 db.once('open', function () {
-	console.log('connected.');
+	console.log('Conectado no mongodb');
 });
 
 var Schema = mongoose.Schema;
