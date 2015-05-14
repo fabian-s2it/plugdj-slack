@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 console.log('Conectando no mongodb');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://linkzaomongodb:linkzaomongodb@ds031822.mongolab.com:31822/heroku_app36849714');
 var db = mongoose.connection;
 
 db.on('error', function (err) {
