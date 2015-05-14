@@ -32,6 +32,12 @@ app.listen(port, function () {
   console.log('Slack bot listening on port ' + port);
 });
 
+
+var http = require("http");
+setInterval(function() {
+    http.get("http://plugdj-slack.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 var PlugAPI = require('plugapi');
 
 var bot = new PlugAPI({
