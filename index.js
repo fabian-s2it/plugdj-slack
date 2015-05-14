@@ -4,7 +4,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 
-console.log('Conectando no mongodb');
+console.log('Conectando no mongodb.');
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOLAB_URI);
