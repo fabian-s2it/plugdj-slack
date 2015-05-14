@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 console.log('Conectando no mongodb');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://linkzaomongodb:linkzaomongodb@ds031822.mongolab.com:31822/heroku_app36849714');
+mongoose.connect(process.env.MONGOLAB_URI);
 var db = mongoose.connection;
 
 db.on('error', function (err) {
@@ -35,8 +35,8 @@ app.listen(port, function () {
 var PlugAPI = require('plugapi');
 
 var bot = new PlugAPI({
-    email: 'fabiancabau@gmail.com',
-    password: 'F@biancabau070893'
+    email: process.env.PLUGDJ_LOGIN,
+    password: process.env.PLUGDJ_PASS
 });
 
 bot.connect('-3089557506968759142'); // The part after https://plug.dj
