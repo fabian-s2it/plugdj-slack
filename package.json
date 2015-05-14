@@ -1,0 +1,19 @@
+{
+  "name": "plugdj-slack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.x.x",
+    "body-parser": "^1.x.x",
+    "request": "~2.54.0",
+    "plugapi": "^3.1.4",
+    "mongodb": "^2.0.30",
+    "mongoose": "^4.0.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
